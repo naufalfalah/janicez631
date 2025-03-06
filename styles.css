@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.phone-number {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.timer {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+/* OTP Box */
+.otp-box {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.otp-box input {
+    width: 45px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.otp-box input:focus {
+    border-color: #007bff;
+}
+
+.resend-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.resend-link {
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background: #007bff;
+}
+
+/* Responsive Numeric Keypad */
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    background: #222;
+    border-radius: 10px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.key {
+    background: #333;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.key:hover {
+    background: #444;
+}
+
+.key.backspace {
+    background: #ff4444;
+}
+
+.key.check {
+    background: #00cc44;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .otp-box input {
+        width: 15%;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .keyboard {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .key {
+        padding: 12px;
+        font-size: 18px;
+    }
+}
+
+.t-otp {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    input {
+      width: 44px;
+      height: 64px;
+      font-size: 32px;
+      text-align: center;
+      padding: 3px;
+      border: 2px solid #ddd;
+      transition: 0.3s ease;
+      border-radius: 3px;
+      -moz-appearance: textfield;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    @media (min-width: 360px) {
+      gap: 10px;
+    }
+  }
